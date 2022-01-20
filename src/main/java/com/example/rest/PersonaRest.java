@@ -44,10 +44,19 @@ public class PersonaRest {
 		personaDao.save(persona);
 	}
 	
+	@GetMapping("/isEmployed/{dni}")
+	public String isEmployed(@PathVariable("dni") String dni){
+		String esEmpleado = "No es Empleado";
+		Persona per = new Persona();
+		per = (Persona) personaDao.findByDni(dni);
+		if(per.isEsEmpleado()) {
+			esEmpleado = "Si es Empleado";
+		}
+		return esEmpleado;
+	}
+	
 	@GetMapping("/findPerson/{dni}")
 	public Persona findPerson(@PathVariable("dni") String dni){
 		return(Persona) personaDao.findByDni(dni);		
 	}
-	
-	
 }

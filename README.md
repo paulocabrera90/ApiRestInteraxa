@@ -3,8 +3,8 @@
 Se hizo una API REST, en java con springboot, con jpa a su vez se creo una base de datos en MYSQL, donde su configuracion esta en el application.context.
 Se uso PostMAN, para hacer el consumo de la api rest con las siguientes request.
 
-Dentro de la estructura del git, esta una carpeta con el nombre de DATABASE, donde estan las tablas
-el nombre de la DATABASE es : interaxa, el usuario y contreseña le ponen cualqiera, acordarse de modificar el application.context
+Dentro de la estructura del git, esta una carpeta con el nombre de DATABASE, donde estan las tablas.
+El nombre de la DATABASE es : interaxa, el usuario y contreseña le ponen cualqiera, acordarse de modificar el application.context
 
 #CARGAR UNA PERSONA;
 POST--> http://localhost:8080/personas/save  body JSON:
